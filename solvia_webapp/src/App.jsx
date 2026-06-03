@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/auth/Login"; 
 import Dashboard from "./pages/admin_page/Dashboard";
 import Signup from "./components/auth/Signup"; 
@@ -17,7 +17,7 @@ function App() {
   return (
     <>
 
-      <BrowserRouter>
+      <HashRouter >
         <Routes>
           {/* Auth Pages */}
           <Route path="/" element={<Login />} /> 
@@ -41,7 +41,7 @@ function App() {
           <Route path="/mao/reports" element={<MaoReports />} />
 
         </Routes>
-      </ BrowserRouter>
+      </ HashRouter >
 
     </>
   )
