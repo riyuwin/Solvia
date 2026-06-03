@@ -5,7 +5,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { db } from "../../firebase";
 
 // Avatar images
-const avatars = [
+/* const avatars = [
   "/assets/img/solvia_avatar1.png",
   "/assets/img/solvia_avatar2.png",
   "/assets/img/solvia_avatar3.png",
@@ -18,7 +18,21 @@ const avatars = [
   "/assets/img/solvia_avatar10.png",
   "/assets/img/solvia_avatar11.png",
   "/assets/img/solvia_avatar12.png",
-];
+]; */
+  const avatars = [
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar1.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar2.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar3.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar4.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar5.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar6.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar7.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar8.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar9.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar10.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar11.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar12.png`,
+  ];
 
 /* ---------- MODAL STYLES ---------- */
 const overlayStyle = {

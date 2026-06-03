@@ -94,7 +94,8 @@ export default function Sidebar() {
           {!isCollapsed && (
             <>
               <img
-                src="/assets/img/solvia_logo5.png"
+                /* src="/assets/img/solvia_logo5.png" */
+                src={`${import.meta.env.BASE_URL}assets/img/solvia_logo5.png`}
                 alt="Solvia Logo"
                 className="left-logo"
               />
