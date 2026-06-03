@@ -1,0 +1,310 @@
+/* 🔒 Reset & box model fix */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🌄 Full screen background */
+.login-wrapper {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("/assets/img/landing_page_1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  /* background: #DCE9D0; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* MAIN BOX */
+.main_container {
+  width: 100%;
+  max-width: 1400px;
+
+  display: flex;
+  flex-wrap: wrap;           /* 🔥 allows stacking on small screens */
+  overflow: hidden;
+
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  outline: 3px solid white;
+}
+
+/* LEFT */
+.left_container {
+  flex: 1 1 50%;
+  min-height: 750px;
+  background-image: url("/assets/img/login_container_3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  display: flex;                  /* enable flexbox */
+  flex-direction: column;         /* stack children vertically */
+  justify-content: center;        /* vertical center */
+  align-items: start;            /* horizontal center */
+  text-align: start;             /* optional: center text */
+  padding: 0px 80px;
+  outline: 1px solid red;
+}
+
+/* RIGHT */
+.right_container {
+  flex: 1 1 50%;
+  min-height: 750px;
+  background-image: url("/assets/img/solvia_container.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  display: flex;                  /* enable flexbox */
+  flex-direction: column;         /* stack children vertically */
+  justify-content: center;        /* vertical center */
+  align-items: center;            /* horizontal center */
+  text-align: center;             /* optional: center text */
+  padding: 32px;
+}
+
+.form-container{
+  width: 100%;
+}
+
+/* RESPONSIVE: STACK VERTICALLY ON SMALL SCREENS */
+@media (max-width: 1024px) {
+  .left_container,
+  .right_container {
+    flex: 1 1 100%;          /* stack vertically */
+    min-height: 770px;       /* adjust height */
+  }
+
+  .main_container {
+    flex-direction: column;  /* ensure vertical stacking */
+    height: auto;        
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .left_container,
+  .right_container {
+    min-height: 770px;       /* adjust height */
+  }
+}
+
+/* 📦 Login card */
+.login-box {
+  width: 100%;
+  max-width: 1200px;
+
+  /* background: #ffffffab; */
+  
+  background-image: url("/assets/img/login_container_3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-size: cover;
+
+  border-radius: 16px;
+
+  /* top & bottom padding dagdag, left & right 32px */
+  padding: 100px 32px;
+
+  /* border: 2px solid #8B9881; */
+  /* box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25); */
+}
+
+.content-logo {
+  display: block;
+  margin: 0 auto 0px auto;
+  /* centered + spacing sa baba */
+  width: 300px;
+  /* adjust size as needed */
+  height: auto;
+}
+
+/* .login-logo {
+  display: block;
+  margin: 0px 0 5px 0;    
+  width: 100px;
+  height: auto;
+} */
+ 
+
+.login-text-img {
+  display: block;
+  margin: 0 auto 0px auto; 
+  width: 100px; 
+  height: auto;
+}
+
+.login-logo {
+  display: block;
+  margin: 0 auto 15px auto; 
+  width: 140px; 
+  height: auto;
+}
+
+/* 🧾 Ensure form full width */
+.login-box form {
+  width: 100%;
+}
+
+.solvia-title {
+  text-align: center;
+  font-size: 55px;
+  font-weight: 700;                   /* make it even bolder */
+  color: #FFFFFF;                     /* fill color */
+  -webkit-text-stroke: 2px #34640D;   /* text border */
+  
+  /* Text shadow: horizontal offset, vertical offset, blur, color */
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.6),  /* soft shadow bottom-right */
+   -2px -2px 4px rgba(0, 0, 0, 0.3); /* subtle top-left highlight */
+   
+  margin-bottom: 0px;
+}
+
+.solvia-title-img{ 
+  display: block;
+  margin: 40px auto 0px auto;
+  /* centered + spacing sa baba */
+  width: 250px;
+  /* adjust size as needed */
+  height: auto;
+}
+
+.solvia-caption-img{ 
+  display: block;
+  margin: 20px auto 10px auto;
+  /* centered + spacing sa baba */
+  width: 450px;
+  /* adjust size as needed */
+  height: auto;
+}
+
+/* 📝 Titles */
+.login-title {
+  text-align: start;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1d1d1d;
+  margin-bottom: 0px;
+}
+
+.login-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #395128;
+  font-weight: 400;
+  margin-bottom: 24px;
+  
+}
+
+/* 🧩 Form groups */
+.form-group {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  color: #1d1d1d;
+  margin-bottom: 6px;
+}
+
+/* ⌨️ Inputs */
+.form-group input {
+  width: 100%;
+  padding: 12px;
+
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #0015FF;
+}
+
+.form-group .form_label {
+  color: #1d1d1d !important;
+}
+
+/* 🔘 Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+
+  background: #3D5925;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 8px;
+
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #849e6c;
+}
+
+/* 🔻 Footer */
+.login-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+/* MOBILE */
+/* Responsive stacking */
+@media (max-width: 1024px) {
+  .main_container {
+    flex-direction: column;
+  }
+
+  .left_container,
+  .right_container {
+    width: 100%;
+    min-height: 500px;
+    padding: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .left_container,
+  .right_container {
+    width: 100%;
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .solvia-title {
+    font-size: clamp(24px, 7vw, 40px);
+  }
+
+  .solvia-title-img {
+    width: 150px;
+  }
+
+  .solvia-caption-img {
+    width: 300px;
+  }
+}
