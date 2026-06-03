@@ -24,7 +24,7 @@ export default function Signup() {
   const [role, setRole] = useState("");
 
   // Avatar selection
-  const avatars = [
+  /* const avatars = [
     "/assets/img/solvia_avatar1.png",
     "/assets/img/solvia_avatar2.png",
     "/assets/img/solvia_avatar3.png",
@@ -37,6 +37,20 @@ export default function Signup() {
     "/assets/img/solvia_avatar10.png",
     "/assets/img/solvia_avatar11.png",
     "/assets/img/solvia_avatar12.png",
+  ]; */
+  const avatars = [
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar1.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar2.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar3.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar4.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar5.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar6.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar7.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar8.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar9.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar10.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar11.png`,
+    `${import.meta.env.BASE_URL}assets/img/solvia_avatar12.png`,
   ];
   const [avatarIndex, setAvatarIndex] = useState(null);
 
@@ -177,7 +191,12 @@ export default function Signup() {
       <div className="signup-box">
 
         <div className="signup_container">
-          <img src="/assets/img/solvia_logo5.png" alt="SOLVIA Logo" className="signup-logo" />
+          {/* <img src="/assets/img/solvia_logo5.png" alt="SOLVIA Logo" className="signup-logo" /> */}
+          <img
+            src={`${import.meta.env.BASE_URL}assets/img/solvia_logo5.png`}
+            alt="SOLVIA Logo"
+            className="signup-logo"
+          />
           <h1 className="signup-title">SOLVIA</h1>  
           <p className="signup-subtitle">Create your account</p>
 

@@ -3,6 +3,12 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "../../css/login.css";
 
+import solviaLogo from "/assets/img/solvia_logo5.png";
+import loginText from "/assets/img/login_text.png";
+import appIcons from "/assets/img/app_icons.png";
+import solviaTitle from "/assets/img/solvia_title.png";
+import caption from "/assets/img/caption.png";
+
 // Firebase imports
 import { auth, db } from "../../firebase"; // make sure you export db (Firestore) too
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -94,13 +100,13 @@ export default function Login() {
         <div class="left_container">
            
             <img
-              src="/assets/img/solvia_logo5.png"
+              src={solviaLogo}
               alt="Solvia Logo"
               className="login-logo"
             />
 
             <img
-              src="/assets/img/login_text.png"
+              src={loginText}
               alt="Solvia Logo"
               className="login-text-img"
             />
@@ -153,19 +159,19 @@ export default function Login() {
         <div class="right_container"> 
           
             <img
-              src="/assets/img/app_icons.png"
+              src={appIcons}
               alt="Solvia Logo"
               className="content-logo"
             />
 
             <img
-              src="/assets/img/solvia_title.png"
+              src={solviaTitle}
               alt="Solvia Logo"
               className="solvia-title-img"
             />
 
             <img
-              src="/assets/img/caption.png"
+              src={caption}
               alt="Solvia Logo"
               className="solvia-caption-img"
             />
